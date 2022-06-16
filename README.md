@@ -34,7 +34,7 @@ Make the theme folder if necessary, then fetch the latest release and extract in
 
 ```mkdir -p /mnt/efi/boot/themes/refind-bsd-black
 cd /mnt/efi/boot/themes/refind-bsd-black
-fetch https://github.com/indgy/refind-bsd-black/archive/refs/tags/0.1.0.tar.gz
+fetch https://github.com/indgy/refind-bsd-black/releases/download/0.1.0/refind-bsd-black.tgz
 tar -xf 0.1.0.tar.gz
 rm 0.1.0.tar.gz
 ```
