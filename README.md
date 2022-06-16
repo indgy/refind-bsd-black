@@ -9,21 +9,40 @@ If anything is missing let me know where to find it or submit a PR.
 
 ## Installation
 
-The following guide assumes your EFI partition is located at ada0p1 and your refind.conf is in the efi/boot folder.
+**Note:** The following guide assumes your EFI partition is located at ada0p1 and your refind.conf is in the efi/boot folder.
 
 Mount your existing EFI partition
 
 `mount -t msdosfs /dev/ada0p1 /mnt`
 
-Make the theme folder if necessary
 
-`mkdir /mnt/efi/boot/themes`
+Now either follow the Git or Release install.
 
-Clone this repository onto your EFI partition
 
-`git clone https://github.com/indgy/refind-bsd-black /mnt/efi/boot/themes`
+### Using Git
 
-Edit your `refind.conf` to reference the theme (assuming your refind folder is named `boot`)
+Make the theme folder if necessary then clone this repository into the rEFInd themes folder.
+
+```mkdir /mnt/efi/boot/themes
+git clone https://github.com/indgy/refind-bsd-black /mnt/efi/boot/themes
+```
+
+
+### Using the release
+
+Make the theme folder if necessary, then fetch the latest release and extract into the rEFInd themes folder.
+
+```mkdir -p /mnt/efi/boot/themes/refind-bsd-black
+cd /mnt/efi/boot/themes/refind-bsd-black
+fetch https://github.com/indgy/refind-bsd-black/archive/refs/tags/0.1.0.tar.gz
+tar -xf 0.1.0.tar.gz
+rm 0.1.0.tar.gz
+```
+
+
+## Configuring refind.conf
+
+Edit your `refind.conf` to reference the theme (assuming your refind folder is named boot)
 
 `edit /mnt/efi/boot/refind.conf`
 
@@ -31,15 +50,14 @@ It should contain a single include line:
 
 `include themes/refind-bsd-black/theme.conf`
 
+Anything you add after the include line will override the theme defaults.
 
-You may wish to override the tools available, if so continue your config in refind.conf after the theme include.
 
-## Example refind.conf
+### Example refind.conf
 
-Your refind.conf lists all available OS installs on your machine, sometimes you need to tell rEFInd which icon to use.
+Sometimes you need to tell rEFInd which icon to use.
 
-```
-menuentry "DragonFlyBSD" {
+```menuentry "DragonFlyBSD" {
     loader efi/dragonflybsd/loader.efi
     icon efi/boot/themes/refind-bsd-black/icons/os_dragonflybsd.png
 }
