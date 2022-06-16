@@ -3,7 +3,7 @@
 ![Simulated screenshot of the theme](screenshot.png)
 
 
-A mash-up of various black rEFInd themes to include the BSD OS icons and nicer version of the tools icons.
+A mash-up of various black rEFInd themes to include the BSD OS icons.
 
 If anything is missing let me know where to find it or submit a PR.
 
