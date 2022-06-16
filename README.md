@@ -9,17 +9,19 @@ If anything is missing let me know where to find it or submit a PR.
 
 ## Installation
 
-Clone this repository
+The following guide assumes your EFI partition is located at ada0p1 and your refind.conf is in the efi/boot folder.
 
-`git clone https://github.com/indgy/refind-bsd-black`
-
-Mount your existing EFI partition (assuming it's at on ada0 at partition 1)
+Mount your existing EFI partition
 
 `mount -t msdosfs /dev/ada0p1 /mnt`
 
-Make the theme folder and copy the refind-bsd-theme folder to your efi partition
+Make the theme folder if necessary
 
-`mkdir /mnt/efi/boot/themes ;; cp ./refind-bsd-black /mnt/efi/boot/themes`
+`mkdir /mnt/efi/boot/themes`
+
+Clone this repository onto your EFI partition
+
+`git clone https://github.com/indgy/refind-bsd-black /mnt/efi/boot/themes`
 
 Edit your `refind.conf` to reference the theme (assuming your refind folder is named `boot`)
 
@@ -29,6 +31,8 @@ It should contain a single include line:
 
 `include themes/refind-bsd-black/theme.conf`
 
+
+You may wish to override the tools available, if so continue your config in refind.conf after the theme include.
 
 
 #### Attributions:
