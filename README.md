@@ -17,13 +17,18 @@ Mount your existing EFI partition (assuming it's at on ada0 at partition 1)
 
 `mount -t msdosfs /dev/ada0p1 /mnt`
 
-Copy the refind-bsd-theme folder to your efi partition
+Make the theme folder and copy the refind-bsd-theme folder to your efi partition
 
-`cp ./refind-bsd-black /mnt/efi`
+`mkdir /mnt/efi/boot/themes ;; cp ./refind-bsd-black /mnt/efi/boot/themes`
 
 Edit your `refind.conf` to reference the theme (assuming your refind folder is named `boot`)
 
 `edit /mnt/efi/boot/refind.conf`
+
+It should contain a single include line:
+
+`include themes/refind-bsd-black/theme.conf`
+
 
 
 #### Attributions:
