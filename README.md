@@ -13,7 +13,9 @@ If anything is missing let me know where to find it or submit a PR.
 
 Mount your existing EFI partition
 
-`mount -t msdosfs /dev/ada0p1 /mnt`
+```
+mount -t msdosfs /dev/ada0p1 /mnt
+```
 
 
 Now either follow the Git or Release install.
@@ -59,7 +61,8 @@ Anything you add after the include line will override the theme defaults.
 
 Sometimes you need to tell rEFInd which icon to use.
 
-```menuentry "DragonFlyBSD" {
+```sh
+menuentry "DragonFlyBSD" {
     loader efi/dragonflybsd/loader.efi
     icon efi/boot/themes/refind-bsd-black/icons/os_dragonflybsd.png
 }
