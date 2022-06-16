@@ -23,7 +23,8 @@ Now either follow the Git or Release install.
 
 Make the theme folder if necessary then clone this repository into the rEFInd themes folder.
 
-```mkdir /mnt/efi/boot/themes
+```sh
+mkdir /mnt/efi/boot/themes
 git clone https://github.com/indgy/refind-bsd-black /mnt/efi/boot/themes
 ```
 
@@ -32,7 +33,8 @@ git clone https://github.com/indgy/refind-bsd-black /mnt/efi/boot/themes
 
 Make the theme folder if necessary, then fetch the latest release and extract into the rEFInd themes folder.
 
-```mkdir -p /mnt/efi/boot/themes/refind-bsd-black
+```sh
+mkdir -p /mnt/efi/boot/themes/refind-bsd-black
 cd /mnt/efi/boot/themes/refind-bsd-black
 fetch https://github.com/indgy/refind-bsd-black/releases/download/0.1.0/refind-bsd-black.tgz
 tar -xf 0.1.0.tar.gz
