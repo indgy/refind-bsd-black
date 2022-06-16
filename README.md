@@ -34,6 +34,30 @@ It should contain a single include line:
 
 You may wish to override the tools available, if so continue your config in refind.conf after the theme include.
 
+## Example refind.conf
+
+Your refind.conf lists all available OS installs on your machine, sometimes you need to tell rEFInd which icon to use.
+
+```
+menuentry "DragonFlyBSD" {
+    loader efi/dragonflybsd/loader.efi
+    icon efi/boot/themes/refind-bsd-black/icons/os_dragonflybsd.png
+}
+menuentry "FreeBSD" {
+    loader efi/freebsd/loader.efi
+    icon efi/boot/themes/refind-bsd-black/icons/os_freebsd.png
+}
+menuentry "OpenBSD" {
+    loader efi/openbsd/bootx64.efi
+    icon efi/boot/themes/refind-bsd-black/icons/os_openbsd.png
+}
+menuentry "Windows" {
+    loader efi/Microsoft/Boot/bootmgr.efi
+}
+```
+
+Note the icon for Windows is found automatically by rEFInd.
+
 
 #### Attributions:
 
