@@ -3,7 +3,9 @@
 ![Simulated screenshot of the theme](screenshot.png)
 
 
-A mash-up of various black rEFInd themes to include the BSD OS icons.
+A black rEFInd BSD icon theme for DragonFlyBSD, FreeBSD, GhostBSD, MidnightBSD, NetBSD, NomadBSD and OpenBSD.
+
+There are also two alternative icons for FreeBSD and GhostBSD.
 
 If anything is missing let me know where to find it or submit a PR.
 
