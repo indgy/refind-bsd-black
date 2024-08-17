@@ -2,7 +2,6 @@
 
 ![Simulated screenshot of the theme](screenshot.png)
 
-
 A black rEFInd BSD icon theme for DragonFlyBSD, FreeBSD, GhostBSD, MidnightBSD, NetBSD, NomadBSD and OpenBSD.
 
 There are also two alternative icons for FreeBSD and GhostBSD.
@@ -19,9 +18,7 @@ Mount your existing EFI partition
 mount -t msdosfs /dev/ada0p1 /mnt
 ```
 
-
 Now either follow the Git or Release install.
-
 
 ### Using Git
 
@@ -32,7 +29,6 @@ mkdir /mnt/efi/boot/themes
 git clone https://github.com/indgy/refind-bsd-black /mnt/efi/boot/themes
 ```
 
-
 ### Using the release
 
 Make the theme folder if necessary, then fetch the latest release and extract into the rEFInd themes folder.
@@ -40,11 +36,10 @@ Make the theme folder if necessary, then fetch the latest release and extract in
 ```sh
 mkdir -p /mnt/efi/boot/themes/refind-bsd-black
 cd /mnt/efi/boot/themes/refind-bsd-black
-fetch https://github.com/indgy/refind-bsd-black/releases/download/0.1.0/refind-bsd-black.tgz
+fetch https://github.com/indgy/refind-bsd-black/releases/download/0.1.1/refind-bsd-black.tgz
 tar -xf refind-bsd-black.tgz
 rm refind-bsd-black.tgz
 ```
-
 
 ## Configuring refind.conf
 
@@ -57,7 +52,6 @@ It should contain a single include line:
 `include themes/refind-bsd-black/theme.conf`
 
 Anything you add after the include line will override the theme defaults.
-
 
 ### Example refind.conf
 
@@ -82,7 +76,6 @@ menuentry "Windows" {
 ```
 
 Note the icon for Windows is found automatically by rEFInd.
-
 
 #### Attributions:
 
